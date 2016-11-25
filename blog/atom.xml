@@ -1,0 +1,27 @@
+---
+layout: feed
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+	<title>Esports at UNCC Event Reel</title>
+	<link href="http://unccesports.org/blog/atom.xml" rel="self"/>
+	<link href="http://unccesports.org/blog"/>
+	<updated>{{ site.time | date_to_xmlschema }}</updated>
+	<id>http://unccesports.org/blog</id>
+	<author>
+		<name>Esports at UNCC</name>
+		<email>unccesports@gmail.com</email>
+	</author>
+
+	{% for post in site.posts %}
+		<entry>
+			<title>{{ post.title }}</title>
+			<link href="http://unccesports.org{{ post.url }}"/>
+			<updated>{{ post.date | date_to_xmlschema }}</updated>
+			<id>http://unccesports.org/{{ post.id }}</id>
+			<content type="html">{{ post.content | xml_escape }}</content>
+		</entry>
+	{% endfor %}
+
+</feed>
