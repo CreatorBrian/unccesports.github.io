@@ -1,5 +1,12 @@
-name: UNCC Esports
+# Site settings
+title: Esports at UNCC
+email: unccesports@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+baseurl: "/" # the subpath of your site, e.g. /blog/
+url: "http://www.unccesports.org" # the base hostname & protocol for your site
+
+twitter_username: unccesports
+github_username: unccesports
+
+# Build settings
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
-gems:
-  - jekyll-sitemap
